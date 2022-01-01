@@ -310,8 +310,8 @@ endif
 " Ultimatus Quitos
 if get(g:, 'enable_universal_quit_mapping', 1)
 	autocmd user_events BufWinEnter,VimEnter *
-		\  if ! maparg('q', 'n')
-		\|   nnoremap <buffer> q <cmd>quit<CR>
+		\  if ! maparg('<Leader>q', 'n')
+		\|   nnoremap <buffer> <Leader>q <cmd>quit<CR>
 		\| endif
 
 	if &diff && has('vim_starting')
@@ -442,8 +442,8 @@ endfunction "}}}
 " ---
 
 if dein#tap('fern.vim')
-	nnoremap <LocalLeader>e <cmd>Fern -toggle -drawer .<CR>
-	nnoremap <LocalLeader>a <cmd>Fern -reveal=% -drawer .<CR>
+	nnoremap <Leader>t <cmd>Fern -toggle -drawer .<CR>
+	nnoremap <Leader>a <cmd>Fern -reveal=% -drawer .<CR>
 endif
 
 if dein#tap('symbols-outline.nvim')
@@ -618,7 +618,7 @@ endif
 
 if dein#tap('any-jump.vim')
 	" Normal mode: Jump to definition under cursor
-	nnoremap <silent> <leader>ii <cmd>AnyJump<CR>
+	nnoremap <silent> <leader>ff <cmd>AnyJump<CR>
 
 	" Visual mode: jump to selected text in visual mode
 	xnoremap <silent> <leader>ii <cmd>AnyJumpVisual<CR>

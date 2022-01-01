@@ -157,12 +157,6 @@
   on_event: VimEnter
   hook_post_source: lua require('plugins.gitsigns')
 
-- repo: chentau/marks.nvim
-  if: has('nvim-0.5')
-  depends: gitsigns.nvim
-  on_event: FileType
-  hook_post_source: lua require('plugins.marks')
-
 - repo: nathanaelkane/vim-indent-guides
   on_event: FileType
   hook_post_source: IndentGuidesEnable
