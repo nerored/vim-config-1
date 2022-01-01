@@ -202,7 +202,7 @@ local config = {
 
 			-- Readonly or zoomed
 			{
-				badge.filemode('%*#', '🔒', '🔎'),
+				badge.filemode('%*#', '', '🔎'),
 				padding = 0,
 				color = { fg = colors.filemode.readonly },
 			},

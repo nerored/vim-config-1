@@ -14,6 +14,8 @@ set shiftwidth=4
 
 map <Leader>qq :wqa<CR>
 
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""                              autoformat setting
 """"
