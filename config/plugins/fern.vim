@@ -58,7 +58,7 @@ function! s:init_fern()
 	nmap <buffer><expr>
 		\ <Plug>(fern-my-open-or-expand)
 		\ fern#smart#leaf(
-		\   "\<Plug>(fern-action-open-and-close)",
+		\   "\<Plug>(fern-action-open)",
 		\   "\<Plug>(fern-action-expand:stay)",
 		\   "\<Plug>(fern-action-collapse)",
 		\ )
