@@ -13,8 +13,8 @@
 - { repo: nvim-lua/plenary.nvim, if: has('nvim-0.5') }
 - { repo: kyazdani42/nvim-web-devicons, if: has('nvim-0.5') }
 
-- repo: christoomey/vim-tmux-navigator
-  if: "! (has('win32') || has('win64'))"
+#- repo: christoomey/vim-tmux-navigator
+#  if: "! (has('win32') || has('win64'))"
 
 - repo: tpope/vim-sleuth
   hook_add: let g:sleuth_no_filetype_indent_on = 1
