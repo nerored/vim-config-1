@@ -328,7 +328,7 @@ nnoremap  [Window]   <Nop>
 nmap      s [Window]
 
 nnoremap [Window]b  <cmd>buffer#<CR>
-nnoremap [Window]c  <cmd>close<CR>
+nnoremap [Window]c  <cmd>tabclost<CR>
 nnoremap [Window]d  <cmd>bdelete<CR>
 nnoremap [Window]v  <cmd>split<CR>
 nnoremap [Window]g  <cmd>vsplit<CR>
