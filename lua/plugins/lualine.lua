@@ -6,13 +6,15 @@ local badge = require('badge')
 
 -- Color table for highlights
 local colors = {
-	-- yellow = '#ECBE7B',
-	-- cyan = '#008080',
-	-- darkblue = '#081633',
-	-- green = '#98be65',
-	-- orange = '#FF8800',
-	-- violet = '#a9a1e1',
-	-- magenta = '#c678dd',
+	yellow = '#ECBE7B',
+	cyan = '#008080',
+	darkblue = '#081633',
+	green = '#98be65',
+	orange = '#FF8800',
+	violet = '#a9a1e1',
+	magenta = '#c678dd',
+	red = "#ec5f67",
+	white = "#202328",
 
 	active = {
 		fg = '#a8a897', -- '#bbc2cf',
@@ -161,10 +163,22 @@ local config = {
 		section_separators = { left = '', right = ''},
 		theme = {
 			normal = {
-				a = { fg = colors.active.fg, bg = colors.active.bg },
+				a = { fg = colors.white, bg = colors.cyan },
 				b = { fg = colors.active.fg, bg = colors.active.bg },
 				c = { fg = colors.active.fg, bg = colors.active.bg },
 				y = { fg = colors.active.fg, bg = colors.active.bg },
+				z = { fg = colors.active.fg, bg = colors.active.progress },
+			},
+		  insert = {
+				a = { fg = colors.white, bg = colors.green },
+				z = { fg = colors.active.fg, bg = colors.active.progress },
+			},
+			visual = {
+				a = { fg = colors.white, bg = colors.yellow },
+				z = { fg = colors.active.fg, bg = colors.active.progress },
+			},
+			replace = {
+				a = { fg = colors.white, bg = colors.red },
 				z = { fg = colors.active.fg, bg = colors.active.progress },
 			},
 			inactive = {
@@ -193,6 +207,12 @@ local config = {
 				padding = { left = 0, right = 1 },
 			},
 
+			-- Mode
+			{
+				"mode",
+			},
+		},
+		lualine_b = {
 			-- Paste mode
 			{
 				function() return vim.go.paste and '=' or '' end,
@@ -262,8 +282,8 @@ local config = {
 				cond = conditions.hide_in_width,
 				padding = 0,
 			},
+
 		},
-		lualine_b = {},
 		lualine_c = {},
 		lualine_x = { function() return '%=' end },
 		lualine_y = {
@@ -296,11 +316,12 @@ local config = {
 	-- INACTIVE STATE --
 	inactive_sections = {
 		lualine_a = {
+		},
+		lualine_b = {
 			{ badge.icon() },
 			{ badge.filepath(3, 5), padding = { left = 1, right = 0 }},
 			{ badge.modified('+'), color = { fg = colors.filemode.modified }},
 		},
-		lualine_b = {},
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {},
