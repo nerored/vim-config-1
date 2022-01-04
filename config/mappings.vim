@@ -246,8 +246,8 @@ nnoremap <A-j>     <cmd>tabnext<CR>
 nnoremap <A-k>     <cmd>tabprevious<CR>
 nnoremap <A-[>     <cmd>tabprevious<CR>
 nnoremap <A-]>     <cmd>tabnext<CR>
-nnoremap <C-Tab>   <cmd>tabnext<CR>
-nnoremap <C-S-Tab> <cmd>tabprevious<CR>
+nnoremap <Tab>   <cmd>tabnext<CR>
+nnoremap <S-Tab> <cmd>tabprevious<CR>
 nnoremap <C-S-j>   <cmd>tabnext<CR>
 nnoremap <C-S-k>   <cmd>tabprevious<CR>
 
